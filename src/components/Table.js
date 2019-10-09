@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
 import Repo from './Repo';
-
 export default class Table extends Component {
   render() {
     const { repos } = this.props.repo;
     return (
       <div style={{ border: '3px green dotted' }}>
         <h6>Table</h6>
-
         <table>
-
           <thead>
             <tr><th>Number</th>
               <th>Title</th>
@@ -22,17 +19,8 @@ export default class Table extends Component {
             </tr>
           </thead>
           <tbody>
-
-
-            
-              
-                <Repo repositories = {repos}/>
-                
-          
-
-
+                <Repo repositories = {repos} changeRepoStatus = {this.props.changeStatus} removeRepos={this.props.removeRpo}/>
           </tbody>
-
         </table>
       </div>
     );
